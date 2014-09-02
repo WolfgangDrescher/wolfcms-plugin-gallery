@@ -1,0 +1,190 @@
+/*----------------------------
+	The file upload form
+-----------------------------*/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+}
+
+.full-width {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.full-width-table {
+	width: 100%;
+}
+
+.full-width-table td,
+.full-width-table th {
+	padding: 5px;
+}
+
+.form-input {
+	padding: 5px!important;
+}
+
+.gallery-thumb {
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gallery-image {
+	text-align: center;
+	height: 150px;
+	width: 150px;
+	background-size: 150px 150px;
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	float: left;
+	margin: 5px;
+	background-color: #fff;
+/*	border: 1px solid #999;*/
+	border: 5px solid #fff;
+	box-shadow: 0 0 5px #666;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-image a {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery-image img {
+	display: inline-block;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+#upload {
+	background-color: #eee;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop {
+	position: relative;
+	background-color: #ddd;
+	padding: 40px 50px;
+/*	margin-bottom: 10px;*/
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	color: #7f858a;
+}
+
+#drop.dragover {
+	box-shadow: inset 0 0 30px #000;
+}
+
+#drop a {
+	left: 20px;
+	background-color: #007a96;
+	padding: 12px 26px;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 2px;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 12px;
+	line-height: 1;
+}
+
+#drop a:hover {
+	background-color: #0986a3;
+	box-shadow: 0 0 5px #333;
+}
+
+#drop input {
+	display: none;
+}
+
+#upload ul {
+	list-style: none;
+/*	margin: 0 -10px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;*/
+}
+
+#upload ul li {
+	background-color: #ddd;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #bbb;
+	padding: 15px;
+	height: 52px;
+	position: relative;
+}
+
+#upload ul li input {
+	display: none;
+}
+
+#upload ul li p {
+	overflow: hidden;
+	white-space: nowrap;
+	color: #666;
+	line-height: 52px;
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	left: 100px;
+}
+
+#upload ul li i {
+	position: absolute;
+	right: 70px;
+	top: 34px;
+	font-weight: normal;
+	font-style: normal;
+	color: #7f7f7f;
+	display: block;
+}
+
+#upload ul li canvas {
+	top: 15px;
+	left: 32px;
+	position: absolute;
+}
+
+#upload ul li span {
+	width: 15px;
+	height: 12px;
+	background: url('../img/icons.png') no-repeat;
+	position: absolute;
+	top: 34px;
+	right: 33px;
+	cursor:pointer;
+}
+
+#upload ul li.working span {
+	height: 16px;
+	background-position: 0 -12px;
+}
+
+#upload ul li.success {
+	background-color: rgba(0,100,0,0.23);
+}
+
+#upload ul li.error {
+	background-color: rgba(100,0,0,0.23);
+}
