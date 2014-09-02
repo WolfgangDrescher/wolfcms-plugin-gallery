@@ -8,7 +8,7 @@ This plugin adds a gallery to the [Wolf CMS](http://wolfcms.org/).
 Features
 --------
 
-- Set own upload images and thumbnails and their sizes. It is possible the define multiple files!
+- Set own upload images and thumbnails and their sizes. It is possible to define multiple files!
 - Uploaded images will resize with the [Image.php](https://github.com/
 WolfgangDrescher/Image) class.
 - Autodetection of Exif data from JPGs for name and description of the image.
