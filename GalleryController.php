@@ -171,9 +171,9 @@ class GalleryController extends PluginController {
 				$image->save();
 				if(isset($_POST['next'])) {
 					$next = $image->getNextImg();
-						if($next) {
-							redirect(get_url().'plugin/gallery/image/'.$next->id);
-						}
+					if($next) {
+						redirect(get_url('plugin/gallery/image/'.$next->id));
+					}
 				}
 			}
 			$this->display('gallery/views/image', array('image' => $image));
