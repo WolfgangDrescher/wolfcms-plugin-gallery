@@ -3,16 +3,16 @@
 if (!defined('IN_CMS')) { exit(); }
 
 Plugin::setInfos(array(
-    'id'          => 'gallery',
-    'title'       => __('Gallery'),
-    'description' => __('Provides photo gallery.'),
-    'version'     => '1.0',
-   	'license'     => 'MIT',
-	'author'      => 'Wolfgang Drescher',
-    'website'     => 'https://github.com/WolfgangDrescher/wolfcms-plugin-gallery',
-    'update_url'  => 'https://raw.githubusercontent.com/WolfgangDrescher/wolfcms-plugin-gallery/master/version.xml',
+	'id' => 'gallery',
+	'title' => __('Gallery'),
+	'description' => __('Provides photo gallery.'),
+	'version' => '1.1',
+	'license' => 'MIT',
+	'author' => 'Wolfgang Drescher',
+	'website' => 'https://github.com/WolfgangDrescher/wolfcms-plugin-gallery',
+	'update_url' => 'https://raw.githubusercontent.com/WolfgangDrescher/wolfcms-plugin-gallery/master/version.xml',
 	'type' => 'both',
-    'require_wolf_version' => '0.8.0'
+	'require_wolf_version' => '0.8.0'
 ));
 
 // use_helper('ActiveRecord');
