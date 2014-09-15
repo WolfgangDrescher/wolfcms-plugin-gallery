@@ -2,7 +2,7 @@
 <wolf-plugins>
 	<wolf-plugin>
 		<id>gallery</id>
-		<version>1.0</version>
+		<version>1.1</version>
 		<status>stable</status>
 	</wolf-plugin>
 </wolf-plugins>
