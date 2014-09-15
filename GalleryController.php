@@ -52,10 +52,10 @@ class GalleryController extends PluginController {
 	// Add an album
 	public function add() {
 		// $this->edit();
-		$album = new GalleryAlbum($_POST);
+		$album = new GalleryAlbum(array_map('trim', $_POST));
 		if($album) {
 			if(isset($_POST['name'], $_POST['description'])) {
-				// $album->setFromData($_POST);
+				// $album->setFromData(array_map('trim', $_POST));
 				if(trim($album->name) != '') {
 					$album->position = GalleryAlbum::getNextPosition();
 					$album->save();
@@ -81,7 +81,7 @@ class GalleryController extends PluginController {
 			$album = GalleryAlbum::findById($id);
 			if($album) {
 				if(isset($_POST['name'], $_POST['description'])) {
-					$album->setFromData($_POST);
+					$album->setFromData(array_map('trim', $_POST));
 					if($_FILES['image']['tmp_name'] != '') {
 						$this->_removeDirectory($album->getPathAbsolute());
 						$this->_createImages($_FILES['image']['tmp_name'], $album->getPathAbsolute());
@@ -167,7 +167,7 @@ class GalleryController extends PluginController {
 		$image = GalleryImage::findById($id);
 		if($image) {
 			if(get_request_method() == 'POST') {
-				$image->setFromData($_POST);
+				$image->setFromData(array_map('trim', $_POST));
 				$image->save();
 				if(isset($_POST['next'])) {
 					$next = $image->getNextImg();
