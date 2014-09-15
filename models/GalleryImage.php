@@ -10,6 +10,10 @@ class GalleryImage extends Record {
 	public $description;
 	public $position;
 	
+	public function getColumns() {
+		return array('id', 'album_id', 'name', 'description', 'position');
+	}
+	
 	public function getNextImg() {
 		return GalleryImage::findOne(array(
 			'where' => 'position > '.intval($this->position).' AND album_id = '.intval($this->album_id),

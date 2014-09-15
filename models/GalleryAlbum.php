@@ -9,6 +9,10 @@ class GalleryAlbum extends Record {
 	public $description;
 	public $position;
 	
+	public function getColumns() {
+		return array('id', 'name', 'description', 'position');
+	}
+	
 	public function getPathAbsolute() {
 		return ($this->id == '' OR $this->id == 0) ? null : CMS_ROOT . '/public/' . rtrim(Plugin::getSetting('path', 'gallery'), '/') . '/albums/' . $this->id . '/';
 	}
